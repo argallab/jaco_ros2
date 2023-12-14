@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- j2n6s200 refers to jaco v2 6DOF non-spherical 2fingers -->
+<!-- j2s7s300 refers to jaco v2 7DOF 3 fingers robot -->
 
 
 <robot xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7,9 +8,10 @@
 
   <xacro:arg name="sim" default="none" />
 
-  <xacro:include filename="$(find ada_description)/urdf/ada.xacro"/>
+  <xacro:include filename="$(find ada_description)/urdf/argallab_jaco.xacro"/>  
+  <!-- above used to be ada.xacro -->
 
-  <xacro:include filename="$(find ada_hardware)/urdf/ada_hardware.ros2_control.xacro"/>
+  <xacro:include filename="$(find ada_hardware)/urdf/argallab_hardware.ros2_control.xacro"/>
 
   <xacro:ada_hardware_interface
     name="Jaco2"

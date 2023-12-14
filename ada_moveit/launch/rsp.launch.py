@@ -1,9 +1,11 @@
 from moveit_configs_utils import MoveItConfigsBuilder
 from moveit_configs_utils.launches import generate_rsp_launch
 
+# rsp === robot state publisher
+
 
 def generate_launch_description():
     moveit_config = MoveItConfigsBuilder(
-        "ada", package_name="ada_moveit"
+        "argallab_jaco", package_name="ada_moveit"
     ).to_moveit_configs()
     return generate_rsp_launch(moveit_config)

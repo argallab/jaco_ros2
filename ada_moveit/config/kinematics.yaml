@@ -1,5 +1,5 @@
 # Adapted from: https://github.com/PickNikRobotics/pick_ik/blob/main/doc/USAGE.md
-jaco_arm:
+arm:
   kinematics_solver: pick_ik/PickIkPlugin
   kinematics_solver_timeout: 0.05
   kinematics_solver_attempts: 3

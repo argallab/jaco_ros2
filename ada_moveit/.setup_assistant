@@ -1,9 +1,9 @@
 moveit_setup_assistant_config:
   urdf:
     package: ada_description
-    relative_path: urdf/ada.xacro
+    relative_path: urdf/argallab_jaco.xacro
   srdf:
-    relative_path: config/ada.srdf
+    relative_path: config/argallab_jaco.srdf
   package_settings:
     author_name: Ethan K. Gordon
     author_email: ekgordon@cs.uw.edu

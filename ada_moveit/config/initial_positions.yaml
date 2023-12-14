@@ -11,12 +11,36 @@ initial_positions:
   # j2n6s200_joint_finger_1: 1.317
   # j2n6s200_joint_finger_2: 1.317
 
-  # Home Position
-  j2n6s200_joint_1: -1.47568
-  j2n6s200_joint_2: 2.92779
-  j2n6s200_joint_3: 1.00845
-  j2n6s200_joint_4: -2.0847
-  j2n6s200_joint_5: 1.43588
-  j2n6s200_joint_6: 1.32575
-  j2n6s200_joint_finger_1: 1.317
-  j2n6s200_joint_finger_2: 1.317
+  # Home Position (ada)
+  # j2n6s200_joint_1: -1.47568
+  # j2n6s200_joint_2: 2.92779
+  # j2n6s200_joint_3: 1.00845
+  # j2n6s200_joint_4: -2.0847
+  # j2n6s200_joint_5: 1.43588
+  # j2n6s200_joint_6: 1.32575
+  # j2n6s200_joint_finger_1: 1.317
+  # j2n6s200_joint_finger_2: 1.317
+
+  # Candle 7DOF
+  j2s7s300_joint_1: 3.14159
+  j2s7s300_joint_2: 3.14159
+  j2s7s300_joint_3: 3.14159
+  j2s7s300_joint_4: 3.14159
+  j2s7s300_joint_5: 3.14159
+  j2s7s300_joint_6: 3.14159
+  j2s7s300_joint_7: 3.14159
+  j2s7s300_joint_finger_1: 1.317
+  j2s7s300_joint_finger_2: 1.317
+  j2s7s300_joint_finger_3: 1.317
+
+  # # 7dof Jaco Home
+  # j2s7s300_joint_1: 4.71
+  # j2s7s300_joint_2: 2.84
+  # j2s7s300_joint_3: 0.00
+  # j2s7s300_joint_4: 0.75
+  # j2s7s300_joint_5: 4.62
+  # j2s7s300_joint_6: 4.48
+  # j2s7s300_joint_7: 4.88
+  # j2s7s300_joint_finger_1: 1.317
+  # j2s7s300_joint_finger_2: 1.317
+  # j2s7s300_joint_finger_3: 1.317

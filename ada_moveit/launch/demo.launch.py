@@ -29,16 +29,8 @@ from moveit_configs_utils.launch_utils import (
 def generate_launch_description():
     # MoveIt Config
     moveit_config = MoveItConfigsBuilder(
-        "ada", package_name="ada_moveit"
+        "argallab_jaco", package_name="ada_moveit"
     ).to_moveit_configs()
-
-    # Calibration Launch Argument
-    calib_da = DeclareLaunchArgument(
-        "calib",
-        default_value="manual",
-        description="Which calibration folder to use with calib_camera_pose.launch.py",
-    )
-    calib = LaunchConfiguration("calib")
 
     # Sim Launch Argument
     sim_da = DeclareLaunchArgument(
@@ -62,43 +54,11 @@ def generate_launch_description():
     )
     servo_file = LaunchConfiguration("servo_file")
 
-    # Copy from generate_demo_launch
+    # Copy from generate_demo_launchinitial_positions
     ld = LaunchDescription()
-    ld.add_action(calib_da)
     ld.add_action(sim_da)
     ld.add_action(ctrl_da)
     ld.add_action(servo_da)
-
-    # Camera Calibration File
-    ld.add_action(
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                [
-                    PathJoinSubstitution(
-                        [
-                            str(moveit_config.package_path),
-                            "calib",
-                            calib,
-                            "calib_camera_pose.launch.py",
-                        ]
-                    )
-                ]
-            ),
-        )
-    )
-
-    # Launch the IMU joint state publisher
-    ada_imu_package_path = get_package_share_directory("ada_imu")
-    ld.add_action(
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(ada_imu_package_path, "launch/ada_imu.launch.py")
-            ),
-            launch_arguments={
-                "sim": sim,
-            }.items(),
-        ),
-    )
 
     ld.add_action(
         DeclareBooleanLaunchArg(
@@ -171,7 +131,7 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                str(moveit_config.package_path / "config/ada.urdf.xacro")
+                str(moveit_config.package_path / "config/argallab_jaco.urdf.xacro")
             ),
             " ",
             "sim:=",

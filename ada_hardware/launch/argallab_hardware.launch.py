@@ -72,15 +72,15 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file",
-            default_value="ada_hardware.xacro",
+            default_value="argallab_hardware.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "sim",
-            default_value="real",
-            description="Which sim to use: 'mock', 'isaac', or 'real'",
+            default_value="none",
+            description="Which sim to use: 'mock', 'isaac', or 'none'",
         )
     )
 
@@ -108,9 +108,9 @@ def generate_launch_description():
     robot_controller = LaunchConfiguration("robot_controller")
     start_rviz = LaunchConfiguration("start_rviz")
 
-    use_sim_time = True
-    if sim == "none":
-        use_sim_time = False
+    use_sim_time = False
+    # if sim == "none":
+    #     use_sim_time = False
 
     # Get URDF via xacro
     robot_description_content = Command(

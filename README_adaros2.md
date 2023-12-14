@@ -1,21 +1,5 @@
-# argallab jaco_ros2
-ROS2 Hardware Interface and Description for the argallab JACO Robot
-
-## Notes
-`robot name = argallab_jaco`
-`group name = arm` -- `kinametics.yaml`
-
-For freeplut failed to open display ':0' :
-https://github.com/ros-planning/moveit2/pull/2049
-https://github.com/ros-planning/moveit2/issues/2026
-
-To find site-packages:
-https://robotics.stackexchange.com/questions/24088/why-are-installed-ros-2-humble-python-packages-split-in-two-directories
-`opt/ros/humble/lib/python3.10/site-packages`
-Changed DISPLAY from `:0` to `DISPLAY` in moveit_configs_utils launchers.py. Need to change this every time we update the package in apt.
-
-TODO: fix the velocity; robot too slow (need to change from 0.35 to 0.86--left note where we need to do that yaml file in ada_moveit)
-
+# ada_ros2
+ROS2 Hardware Interface and Description for the ADA Robot
 
 ## Dependencies
 1. Install the Kinova SDK for your robot by searching [here](https://www.kinovarobotics.com/resources?r=79301&s). PRL currently uses the [Gen2 SDK v1.5.1](https://drive.google.com/file/d/1UEQAow0XLcVcPCeQfHK9ERBihOCclkJ9/view). Note that although the latest version of that SDK is for Ubuntu 16.04, it still works on Ubuntu 22.04 (only for x86 systems, not ARM system).
@@ -61,6 +45,3 @@ To create your own Servo client:
 ## Camera Calibration
 
 See the [README for the `default` calibration](./ada_moveit/calib/default/README.md) for details about our extrinsics calibration methdology.
-
-
-
