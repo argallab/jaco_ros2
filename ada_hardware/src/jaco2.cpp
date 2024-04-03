@@ -329,7 +329,7 @@ hardware_interface::CallbackReturn Jaco2::on_configure(
   }
 
   KinovaDevice robot;
-  r = GetActiveDevice(robot);
+  r = GetActiveDevice(robot);  
   if (r != NO_ERROR_KINOVA) {
     RCLCPP_ERROR(rclcpp::get_logger("Jaco2"), "Could not get Active Device: Error code %d", r);
     CloseAPI();

@@ -1,11 +1,12 @@
 # argallab jaco_ros2
 ROS2 Hardware Interface and Description for the argallab JACO Robot
 
-## Notes
+## Notes for argallab port
 `robot name = argallab_jaco`
+
 `group name = arm` -- `kinametics.yaml`
 
-For freeplut failed to open display ':0' :
+For freeglut failed to open display ':0' :
 https://github.com/ros-planning/moveit2/pull/2049
 https://github.com/ros-planning/moveit2/issues/2026
 
@@ -15,6 +16,12 @@ https://robotics.stackexchange.com/questions/24088/why-are-installed-ros-2-humbl
 Changed DISPLAY from `:0` to `DISPLAY` in moveit_configs_utils launchers.py. Need to change this every time we update the package in apt.
 
 TODO: fix the velocity; robot too slow (need to change from 0.35 to 0.86--left note where we need to do that yaml file in ada_moveit)
+
+If experiencing some voodoo, exit docker!! And reenter. (issue we faced was having 3 different robot_state_publisher nodes)
+
+##S jaco2.cpp
+Robot device is 8 and that is for our robot (dofs 7, fingers 3)
+
 
 
 ## Dependencies
