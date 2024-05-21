@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- j2n6s200 refers to jaco v2 6DOF non-spherical 2fingers -->
+<!-- j2s7s300 refers to jaco v2 7DOF 3 fingers robot -->
+
+
+<robot xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xacro="http://www.ros.org/wiki/xacro" name="argallab_jaco_hardware">
+
+  <xacro:arg name="sim" default="none" />
+
+  <xacro:include filename="$(find argallab_jaco_description)/urdf/argallab_jaco.xacro"/>  
+  <!-- above used to be argallab_jaco.xacro -->
+
+  <xacro:include filename="$(find argallab_jaco_hardware)/urdf/argallab_hardware.ros2_control.xacro"/>
+
+  <xacro:argallab_jaco_hardware_interface
+    name="Jaco2"
+    sim="$(arg sim)" />
+
+</robot>

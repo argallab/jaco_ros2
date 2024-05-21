@@ -4,7 +4,7 @@ ROS2 Hardware Interface and Description for the argallab JACO Robot
 ## Notes for argallab port
 `robot name = argallab_jaco`
 
-`group name = arm` -- `kinametics.yaml`
+`group name = jaco_arm` -- `kinametics.yaml`
 
 For freeglut failed to open display ':0' :
 https://github.com/ros-planning/moveit2/pull/2049

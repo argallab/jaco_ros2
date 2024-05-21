@@ -1,0 +1,10 @@
+<library path="argallab_jaco_hardware">
+  <class name="argallab_jaco_hardware/Jaco2"
+         type="argallab_jaco_hardware::Jaco2"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Interface for controlling 6DOF and 7DOF Kinova JACO2 arms over USB, with support for 2 or 3 fingers.
+    </description>
+  </class>
+
+</library>
