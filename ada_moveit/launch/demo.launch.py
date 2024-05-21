@@ -25,7 +25,6 @@ from moveit_configs_utils.launch_utils import (
     DeclareBooleanLaunchArg,
 )
 
-
 def generate_launch_description():
     # MoveIt Config
     moveit_config = MoveItConfigsBuilder(
