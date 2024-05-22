@@ -11,7 +11,7 @@
   <xacro:include filename="$(find argallab_jaco_description)/urdf/argallab_jaco.xacro"/>  
   <!-- above used to be argallab_jaco.xacro -->
 
-  <xacro:include filename="$(find argallab_jaco_hardware)/urdf/argallab_hardware.ros2_control.xacro"/>
+  <xacro:include filename="$(find argallab_jaco_hardware)/urdf/argallab_jaco_hardware.ros2_control.xacro"/>
 
   <xacro:argallab_jaco_hardware_interface
     name="Jaco2"

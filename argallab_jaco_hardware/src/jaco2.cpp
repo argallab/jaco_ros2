@@ -428,7 +428,8 @@ hardware_interface::CallbackReturn Jaco2::on_activate(
 }
 
 // This makes the reported joint values to start within urdf limits
-static const double hardcoded_pos_midpoints[7] = {0.0, M_PI, M_PI, 0.0, 0.0, 0.0, 0.0};
+// static const double hardcoded_pos_midpoints[7] = {0.0, M_PI, M_PI, 0.0, 0.0, 0.0, 0.0};
+static const double hardcoded_pos_midpoints[7] = {0.0, M_PI, 0.0, M_PI, 0.0, M_PI, 0.0};
 bool Jaco2::initializeOffsets()
 {
   // Clear and re-read offsets

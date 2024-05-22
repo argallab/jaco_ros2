@@ -25,7 +25,7 @@ target_link_libraries(argallab_jaco_hardware -l:Kinova.API.CommLayerUbuntu.so -l
 
 ament_target_dependencies(argallab_jaco_hardware rclcpp rclcpp_lifecycle pluginlib hardware_interface sensor_msgs)
 
-pluginlib_export_plugin_description_file(hardware_interface argallab_hardware.xml)
+pluginlib_export_plugin_description_file(hardware_interface argallab_jaco_hardware.xml)
 
 # Install (required for pluginlib)
 install(
