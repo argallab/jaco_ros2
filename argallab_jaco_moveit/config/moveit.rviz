@@ -16,7 +16,8 @@ Visualization Manager:
     - Class: moveit_rviz_plugin/MotionPlanning
       Name: MotionPlanning
       Planned Path:
-        Loop Animation: true
+        # Loop Animation: true  # found from https://answers.ros.org/question/340250/moveit-keeps-repeating-planned-path-trajectory/  (8/2/24)
+        Loop Animation: false
         State Display Time: 0.05 s
         Trajectory Topic: display_planned_path
       Planning Scene Topic: monitored_planning_scene
